@@ -1,10 +1,6 @@
 # My ZenUML Theme
 
-[ZenUML](https://app.zenuml.com/?src=landing) is a great tool to visualise your sequence diagram, and you can define the diagram in `code`.
-
-![](screenshots/within-zenuml-app.png)
-
-So essentially, it allows you to define a sequence diagram in a DSL like:
+[ZenUML](https://zenuml.com/) is a great tool to visualise your sequence diagram, and you can define the diagram in `code`. So essentially, it allows you to define a sequence diagram in a DSL like:
 
 ```
 BookLibService.Borrow(id) {
@@ -25,9 +21,11 @@ BookLibService.Borrow(id) {
 
 It does the rest for you:
 
-![]()
+![Online Editor](screenshots/within-zenuml-app.png)
 
 It also runs in many other places, like Confluence, WebStorm and so on. And the beautiful thing about it is you can customise the style by CSS.
+
+![Webstorm](screenshots/within-webstorm.png)
 
 ## How to use
 

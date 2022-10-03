@@ -7,12 +7,16 @@
   --text-color: #444;
   --border-color: #0f7fd0;
   --occurrence-color: #fdb90a;
+
+  --border-radius: 5px;
 }
+
+/* diagram */
 
 #diagram {
   background: rgba(250, 250, 250, 1);
   font-weight: lighter;
-  color: #ccc;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -23,13 +27,13 @@
 #diagram .frame {
   background-color: white;
   box-shadow: 0px 5px 10px -5px #ccc;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
 #diagram .participant {
   padding: 0.4rem 0.8rem;
   border: 1px solid var(--text-color);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 #diagram .participant .name {
@@ -52,38 +56,42 @@
   color: var(--text-color);
 }
 
-#diagram .hide-export {
-  /*   margin-right: 1rem; */
-}
-
 #diagram .header .name {
   background-color: var(--highlight-color);
-  padding: 0.4rem 0.8rem;
 }
 
 #diagram .header .name label {
   color: white;
 }
 
+/* fragment */
+#diagram .sequence-diagram .fragment .header .keyword {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+#diagram .sequence-diagram .fragment .header .exception,
+#diagram .sequence-diagram .fragment .header .condition {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
 #diagram .sequence-diagram .fragment {
   border-color: var(--border-color);
 }
 
+/* comments */
 #diagram .comments {
   color: var(--text-color);
 }
 
-#diagram .footer {
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
+/* message */
 #diagram .sequence-diagram .message {
   color: var(--text-color);
 }
 
 #diagram .zenuml .hover\:bg-yellow-300 {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 #diagram .zenuml .hover\:bg-yellow-300:hover {
@@ -94,8 +102,13 @@
   color: white;
 }
 
-#diagram .zenuml .hover\:bg-yellow-300 .name {
-  padding: 0.4rem 0.8rem;
+/* arrows */
+#diagram .sequence-diagram .message svg polyline.head {
+  fill: var(--text-color);
+}
+
+#diagram .sequence-diagram .message svg polyline {
+  stroke: var(--text-color);
 }
 
 #diagram .sequence-diagram .message {
@@ -103,16 +116,22 @@
   border-color: var(--text-color);
 }
 
+/* footer */
+#diagram .footer {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+#diagram .zoom-controls {
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
 #diagram .zenuml .left-1 {
   margin-left: 1rem;
 }
 
 #diagram .zenuml .bg-blue-100 {
-  font-family: "Roboto Slab", serif;
   align-items: center;
-}
-
-#diagram .zoom-controls {
-  border-radius: 5px;
-  cursor: pointer;
 }
